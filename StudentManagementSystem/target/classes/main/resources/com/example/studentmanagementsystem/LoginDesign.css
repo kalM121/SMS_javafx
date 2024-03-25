@@ -1,0 +1,27 @@
+.left-form{
+    -fx-background-color:linear-gradient(to bottom right, #2178b2, #0d5283);
+    -fx-border-color:#000;
+     -fx-border-width:.4px 0px .4px .4px;
+    }
+.right-form{
+        -fx-background-color:#fff;
+        -fx-border-color:#000;
+         -fx-border-width:.4px .4px .4px 0px;
+        }
+.close{
+            -fx-background-color:transparent;
+            -fx-cursor:hand;
+        }
+.close:hover{
+            -fx-background-color:#1dbf91;
+        }
+
+.login-btn{
+    -fx-background-color:linear-gradient(to bottom, #2968a7, #14405d);
+    -fx-background-radius:4px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+}
+.login-btn:hover{
+    -fx-background-color:linear-gradient(to bottom, #277bd0, #1b6fa4);
+}

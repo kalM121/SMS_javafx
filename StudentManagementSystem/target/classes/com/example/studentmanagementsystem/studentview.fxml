@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentmanagementsystem.studentviewController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="1100.0">
+         <top>
+            <AnchorPane prefHeight="43.0" prefWidth="1000.0" styleClass="semi-top-form" stylesheets="@studentview.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="35.0" prefWidth="1000.0" styleClass="top-form" stylesheets="@studentview.css">
+                     <children>
+                        <Label layoutX="39.0" layoutY="9.0" text="Student Management System">
+                           <font>
+                              <Font name="Times New Roman Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="cancelBtn" layoutX="950.0" layoutY="2.0" mnemonicParsing="false" onAction="#close" prefHeight="32.0" prefWidth="50.0" styleClass="close" stylesheets="@studentview.css" text="Cancel">
+                           <font>
+                              <Font name="Times New Roman" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="557.0" prefWidth="811.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="241.0" layoutY="187.0" prefHeight="557.0" prefWidth="801.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane layoutX="11.0" layoutY="6.0" prefHeight="546.0" prefWidth="781.0" stylesheets="@studentview.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="6.0">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <TableView fx:id="student_info_tableView" layoutX="12.0" layoutY="30.0" prefHeight="169.0" prefWidth="758.0" stylesheets="@studentview.css">
+                                <columns>
+                                  <TableColumn fx:id="student_col_studId" prefWidth="75.0" text="studId" />
+                                  <TableColumn fx:id="student_col_year" prefWidth="89.0" text="Year" />
+                                    <TableColumn fx:id="student_col_course" prefWidth="83.0" text="Course" />
+                                    <TableColumn fx:id="student_col_firstName" prefWidth="122.0" text="First Name" />
+                                    <TableColumn fx:id="student_col_lastName" prefWidth="125.0" text="LastName" />
+                                    <TableColumn fx:id="student_col_gender" prefWidth="119.0" text="Gender" />
+                                    <TableColumn fx:id="student_col_status" prefWidth="143.0" text="Status" />
+                                </columns>
+                              </TableView>
+                              <TableView fx:id="student_grade_tableView" layoutX="31.0" layoutY="299.0" prefHeight="179.0" prefWidth="676.0">
+                                <columns>
+                                  <TableColumn fx:id="student_col_gid" prefWidth="95.0" text="studId" />
+                                  <TableColumn fx:id="student_col_gy" prefWidth="138.0" text="year" />
+                                    <TableColumn fx:id="student_col_gc" prefWidth="77.0" text="course" />
+                                    <TableColumn fx:id="student_col_firstsem" prefWidth="99.0" text="First semester" />
+                                    <TableColumn fx:id="student_col_secondsem" prefWidth="138.0" text="second semester" />
+                                    <TableColumn fx:id="student_col_final" prefWidth="127.0" text="Final" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <left>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@studentview.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Line endX="89.5" layoutX="99.0" layoutY="190.0" startX="-87.5" stroke="WHITE" />
+                  <Label layoutX="51.0" layoutY="133.0" text="WELCOME" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Label fx:id="username" layoutX="72.0" layoutY="153.0" text="Student" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <Button fx:id="home_btn" layoutX="11.0" layoutY="210.0" mnemonicParsing="false" onAction="#defaultNav" prefHeight="25.0" prefWidth="167.0" styleClass="nav-btn" stylesheets="@studentview.css" text="Home" />
+                  <Button fx:id="logout" layoutX="63.0" layoutY="524.0" mnemonicParsing="false" onAction="#logout" styleClass="close" stylesheets="@studentview.css" text="Sign Out" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
+</StackPane>
